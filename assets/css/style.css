@@ -831,16 +831,7 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
-}
-.timeline-text ul {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-
-.timeline-text ul li {
-  list-style: disc;
-}
-
+}\r\n
 
 
 
@@ -1897,5 +1888,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 }
+
+
 
 
