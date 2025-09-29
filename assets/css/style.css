@@ -1815,6 +1815,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     min-width: 65%;
     width: 65%;
     margin: 0;
+    flex: 1;
   }
 
 
