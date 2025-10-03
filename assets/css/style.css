@@ -772,7 +772,20 @@ main {
   margin: 1.25rem 0;             /* top/bottom spacing */
 }
 .article-title { margin-bottom: 30px; }
+.skills {
+  display: flex;         /* put them in a row */
+  flex-wrap: wrap;       /* allow wrapping if too long */
+  gap: 0.5rem;           /* space between boxes */
+}
 
+.skill {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 2px solid #000;       /* black outline */
+  border-radius: 10px;          /* rounded corners */
+  font-size: 1rem;
+  background: #fff;             /* white background */
+}
 
 /**
  * education and experience 
