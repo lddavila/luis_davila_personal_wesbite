@@ -1854,6 +1854,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 60px;
     z-index: 1;
     flex: 0 0 340px;
+    overflow-y:auto;
   }
 
   .sidebar-info { flex-direction: column; }
