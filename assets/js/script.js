@@ -157,3 +157,42 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// service link -> portfolio filter deep link
+const serviceLinks = document.querySelectorAll("[data-service-link]");
+
+if (serviceLinks.length > 0) {
+  const portfolioNavLink = Array.from(navigationLinks).find(
+    (link) => link.innerText.trim().toLowerCase() === "portfolio"
+  );
+
+  serviceLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const targetFilterId = this.getAttribute("data-target-filter");
+
+      if (portfolioNavLink) {
+        portfolioNavLink.click();
+      }
+
+      requestAnimationFrame(() => {
+        const filterBtnTarget = document.getElementById(targetFilterId);
+
+        if (filterBtnTarget) {
+          filterBtnTarget.click();
+
+          if (typeof filterBtnTarget.scrollIntoView === "function") {
+            filterBtnTarget.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }
+      });
+
+      if (targetFilterId) {
+        history.replaceState(null, "", `#${targetFilterId}`);
+      }
+    });
+  });
+}
